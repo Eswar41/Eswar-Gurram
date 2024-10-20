@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <h1>DHFM</h1>
+        </div> 
+
+        <div class="navbar-right">
+            <ul>
+                <li class="elements"><a class="dog" href="index.html">Home</a></li>
+                <li class="elements"><a class="dog" href="about.html">About</a></li>
+                <li class="elements"><a class="dog" href="services.html">Services</a></li>
+                <li class="elements"><a class="dog" href="contact.html">Contact</a></li>
+                <li class="elements"><a class="dog" href="#" onclick="playVideo()">Video</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div id="videoSection" style="display:none; margin-top: 20px;">
+        <video id="myVideo" width="100%" height="100%" controls>
+            <source src="videoplayback.mp4" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
+    </div>
+
+    <script>
+        function playVideo() {
+            var videoSection = document.getElementById("videoSection");
+            var video = document.getElementById("myVideo");
+
+            // Display the video section immediately
+            videoSection.style.display = "block";
+
+            // Play the video directly
+            video.play();
+        }
+    </script>
+</body>
+</html>
